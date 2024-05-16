@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryption and Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #b30059;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #c2397b;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <h1 style="color: white;">RSA Decryption</h1>
+        <div>
+            <a href="key_generation.html">Key Generate</a>
+            <a href="encryption.html">Encrypt</a>
+            <a href="index.html">Home</a>
+        </div>
+    </nav>
+
+    <section id="decryption">
+        <h2>RSA Decryption</h2>
+        <label for="ciphertext_decryption">Enter ciphertext:</label>
+        <textarea name="ciphertext_decryption" id="ciphertext_decryption" cols="100" rows="5"></textarea>
+        
+        <label for="privateKeyDecrypt">Add Private Key:</label>
+        <textarea id="privateKeyDecrypt" name="privateKeyDecrypt" rows="5" cols="100"></textarea>
+        
+        <button id="decryptButton">Decrypt</button><br><br>
+        
+        <label for="decryptedResult">Decrypted Result:</label>
+        <textarea id="decryptedResult" name="decryptedResult" rows="5" cols="100" readonly></textarea>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+    <script src="decrypt.js"></script>
+</body>
+</html>

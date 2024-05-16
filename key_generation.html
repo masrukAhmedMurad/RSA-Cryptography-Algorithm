@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryption and Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #b30059;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #c2397b;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <h1 style="color: white;">RSA Key Generation</h1>
+        <div>
+            <a href="encryption.html">Encrypt</a>
+            <a href="decryption.html">Decrypt</a>
+            <a href="index.html">Home</a>
+
+        </div>
+    </nav>
+
+
+    <section id="keyGeneration">
+        <h2>RSA Key Generation</h2>
+        <button id="generateKeysButton">Generate New Keys</button><br><br><br>
+
+        <label for="privateKey">Generated Private Key:</label>
+        <textarea id="privateKey" name="privateKey" rows="5" cols="100" placeholder="Generated private key will appear here" readonly></textarea><br>
+        <button id="savePrivateKey">Save Private Key</button><br><br>
+        
+        <label for="publicKey">Generated Public Key:</label>
+        <textarea id="publicKey" name="publicKey" rows="5" cols="100" placeholder="Generated public key will appear here" readonly></textarea><br>
+        <button id="savePublicKey">Save Public Key</button><br><br>
+        
+    </section>
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"></script>
+    <script src="key_generation.js"></script>
+</body>
+</html>
